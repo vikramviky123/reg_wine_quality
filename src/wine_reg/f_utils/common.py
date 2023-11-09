@@ -82,19 +82,27 @@ def load_json(path: Path) -> ConfigBox:
 
 
 @ensure_annotations
-def save_bin(data: Any, path: Path):
+def save_pickle(trainModels, joblib_file_path: Path):
     """save binary file
 
     Args:
-        data (Any): data to be saved as binary
-        path (Path): path to binary file
+        trainModels (Any): data to be saved as binary
+        joblib_file_path (Path): path to binary file
     """
-    joblib.dump(value=data, filename=path)
-    logging.info(f"binary file saved at: {path}")
+
+    fileDir, fileName = os.path.split(joblib_file_path)
+
+    # create directory if not exists
+    os.makedirs(fileDir, exist_ok=True)
+
+    # Use joblib to save the list of trained models to a pickle file
+    joblib.dump(trainModels, joblib_file_path)
+
+    logging.info(f"binary file saved into: {joblib_file_path}")
 
 
 @ensure_annotations
-def load_bin(path: Path) -> Any:
+def load_pickle(path: Path):
     """load binary data
 
     Args:
