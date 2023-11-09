@@ -25,3 +25,6 @@ TestResults.xml
 artifacts/*
 logs/*
 research/*
+
+mlartifacts/*
+mlruns/*

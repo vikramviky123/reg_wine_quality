@@ -24,3 +24,13 @@ class ModelTrainerConfig:
     test_data_path: Path
     model_name: str
     target: str
+
+
+@dataclass(frozen=True)
+class ModelEvalConfig:
+    root_dir: Path
+    test_data_path: Path
+    model_path: Path
+    eval_results: Path
+    best_params: Path
+    mlflow_uri: str

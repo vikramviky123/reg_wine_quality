@@ -7,7 +7,8 @@ from src.wine_reg.a_constants import *
 from src.wine_reg.f_utils.common import read_yaml, create_directories
 from src.wine_reg.b_entity.config_entity import (DataIngestionConfig,
                                                  DataTransformationConfig,
-                                                 ModelTrainerConfig)
+                                                 ModelTrainerConfig,
+                                                 ModelEvalConfig)
 
 
 class ConfigurationManager:
@@ -58,3 +59,19 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+
+    def get_model_eval_config(self) -> ModelEvalConfig:
+        config = self.config.model_eval
+
+        create_directories([config.root_dir])
+
+        model_eval_config = ModelEvalConfig(
+            root_dir=Path(config.root_dir),
+            test_data_path=Path(config.test_data_path),
+            model_path=Path(config.model_path),
+            eval_results=Path(config.eval_results),
+            best_params=Path(config.best_params),
+            mlflow_uri=config.mlflow_uri
+        )
+
+        return model_eval_config
