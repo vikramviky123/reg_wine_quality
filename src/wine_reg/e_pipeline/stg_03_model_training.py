@@ -7,7 +7,7 @@ from src.wine_reg.b_entity.config_entity import ModelTrainerConfig
 from src.wine_reg.c_config.configuration import ConfigurationManager
 from src.wine_reg.d_components.model_trainer import ModelTrainer
 
-STAGE_NAME = "DATA -- TRAINING -- STAGE"
+STAGE_NAME = "MODEL -- TRAINING -- STAGE"
 
 
 class ModelTrainingPipeline:
