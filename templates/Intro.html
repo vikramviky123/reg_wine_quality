@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- This is Welcome section ---------------------------------->
+    <h1> Wine Quality Prediction</h1>
+    <section id="Intro">
+
+        <h1 class="h-primary"><span>Welcome to Wine Quality Prediction</span></h1>
+
+        <p>
+            The dataset for this exercise is wine quality prediction, and our task is to predict the target variable `quality` of the wines listed in the dataset.
+        </p>
+
+    </section>
+
+    <section id="Intro">
+
+        <h1><span>Context:</span></h1>
+        <p>
+            Wine quality is a crucial factor in determining the overall appeal of a wine. Several elements can influence the quality of wine, including its chemical composition, production process, and more. This dataset contains various chemical and physical attributes of different wines, and our goal is to predict the wine quality based on these factors.
+        </p>
+
+
+    </section>
+
+    <section id="Intro">
+
+        <p>The dataset includes the following independent variables:</p>
+
+        <h2 class="h-secondary"><span>Independent Variables:</span></h2>
+
+        <ul class="data-list">
+            <li><strong>fixed acidity:</strong> The fixed (non-volatile) acidity of the wine.</li>
+            <li><strong>volatile acidity:</strong> The volatile acidity of the wine.</li>
+            <li><strong>citric acid:</strong> The citric acid content in the wine.</li>
+            <li><strong>residual sugar:</strong> The residual sugar content in the wine.</li>
+            <li><strong>chlorides:</strong> The chloride content in the wine.</li>
+            <li><strong>free sulfur dioxide:</strong> The amount of free sulfur dioxide in the wine.</li>
+            <li><strong>total sulfur dioxide:</strong> The total sulfur dioxide content in the wine.</li>
+            <li><strong>density:</strong> The density of the wine.</li>
+            <li><strong>pH:</strong> The pH level of the wine.</li>
+            <li><strong>sulphates:</strong> The sulphate content in the wine.</li>
+            <li><strong>alcohol:</strong> The alcohol content in the wine.</li>
+        </ul>
+
+        <h2 class="h-secondary"><span>Target Variable:</span></h2>
+        <p><strong>quality:</strong> The quality rating of the wine, typically on a scale.</p>
+
+        <h2 class="h-secondary"><span>Metrics:</span></h2>
+        <p>You can evaluate the model using the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html" target="_blank">Mean Absolute Error (MAE)</a> metric.</p>
+    </section>
+
+{% endblock %}

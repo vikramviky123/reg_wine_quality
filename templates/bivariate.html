@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- This is Welcome section ---------------------------------->
+    <h1>Bivariate Analysis</h1>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/quality.jpg') }}" alt="Quality Bivariate Analysis Plot">
+    </div>
+  
+    <br>
+    <h2>Pair Plot</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/pairplot.jpg') }}" alt="Pair Plot Bivariate Analysis">
+    </div>
+    <br>
+    <h2>Correlation Plot Spearman</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/Correlation Plot_spearman.jpg') }}" alt="Correlation Plot (Spearman) Bivariate Analysis">
+    </div>
+  
+    <div id="summary">
+        <h2>Summary of Bivariate Analysis</h2>
+    
+        <div class="summary-section">
+            <h3>Quality and Volatile Acidity</h3>
+            <ul>
+                <li>Quality has a negative correlation with volatile acidity.</li>
+            </ul>
+        </div>
+    
+        <div class="summary-section">
+            <h3>Quality and Sulphates, Alcohol</h3>
+            <ul>
+                <li>Quality has a positive correlation with sulphates and alcohol.</li>
+            </ul>
+        </div>
+    
+        <div class="summary-section">
+            <h3>Correlation</h3>
+            <ul>
+                <li><strong>Strong correlation</strong> between independent variables.</li>
+                <li>Strong <strong>nonlinear</strong> relationship with the target variable <strong>quality</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

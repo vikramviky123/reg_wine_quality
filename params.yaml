@@ -55,7 +55,7 @@ histgradient_boost:
 xgb_regressor:
   objective:
     type: categorical
-    choices: [reg:squarederror]
+    choices: ["reg:squarederror"]
 
   booster:
     type: categorical

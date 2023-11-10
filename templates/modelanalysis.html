@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+   <div id="model">
+    <h1>Model Analysis</h1>
+
+    <div class="content">
+        <h2>1. Ensemble of 4 Models for Training</h2>
+        <p>Training involves the use of four different models for regression:</p>
+        <ul>
+            <li>Random Forest Regression</li>
+            <li>Historical Gradient Boosting Machine Regression</li>
+            <li>XGBoost Regression</li>
+            <li>LightGBM Regression</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>2. Model Training</h2>
+        <p>Model training is performed using k-fold cross-validation with 5 splits. The average of predicted values is computed to evaluate the model's performance.</p>
+    </div>
+
+    <div class="content">
+        <h2>3. Metrics Chosen</h2>
+        <p>The following metrics are chosen to assess model performance:</p>
+        <ul>
+            <li>R-squared (R2)</li>
+            <li>Mean Squared Error (MSE)</li>
+            <li>Mean Absolute Error (MAE)</li>
+            <li>Root Mean Squared Error (RMSE)</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>4. Results</h2>
+        <table class="results-table">
+            <tr>
+                <th>Model</th>
+                <th>Validation (R2, MAE, MSE, RMSE)</th>
+                <th>Test (R2, MAE, MSE, RMSE)</th>
+            </tr>
+            <tr>
+                <td>Random Forest</td>
+                <td>0.456, 0.437, 0.351, 0.627</td>
+                <td>0.412, 0.470, 0.394, 0.590</td>
+            </tr>
+            <tr>
+                <td>HistGradient Boost</td>
+                <td>0.405, 0.483, 0.383, 0.645</td>
+                <td>0.379, 0.511, 0.416, 0.617</td>
+            </tr>
+            <tr>
+                <td>XGBoost Regressor</td>
+                <td>0.439, 0.458, 0.361, 0.644</td>
+                <td>0.380, 0.496, 0.415, 0.599</td>
+            </tr>
+            <tr>
+                <td>LGBM Regressor</td>
+                <td>0.460, 0.440, 0.348, 0.642</td>
+                <td>0.383, 0.486, 0.413, 0.588</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Best Model for R2 Score: LightGBM Regressor (0.460)</h2><br>    
+    <h2>Best Model for MAE Score: Random Forest (0.437)</h2><br>
+    <h2>Best Model for MSE Score: LightGBM Regressor (0.348)</h2><br>
+    <h2>Best Model for RMSE Score: Random Forest (0.627)</h2><br>
+    <h2><span class="highlight-yellow">Going Forward with Random Forest Regressor</span></h2>
+
+</div>
+
+{% endblock %}

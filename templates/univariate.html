@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+<div id="uni">
+    <div>
+        <h1>Univariate Analysis</h1>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/fixed acidity.jpg') }}" alt="Fixed Acidity Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/volatile acidity.jpg') }}" alt="Volatile Acidity Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/citric acid.jpg') }}" alt="Citric Acid Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/residual sugar.jpg') }}" alt="Residual Sugar Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/chlorides.jpg') }}" alt="Chlorides Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/free sulfur dioxide.jpg') }}" alt="Free Sulfur Dioxide Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/total sulfur dioxide.jpg') }}" alt="Total Sulfur Dioxide Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/density.jpg') }}" alt="Density Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/pH.jpg') }}" alt="pH Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/sulphates.jpg') }}" alt="Sulphates Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/alcohol.jpg') }}" alt="Alcohol Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/quality.jpg') }}" alt="Quality Distribution Plot">
+        </div>
+    </div>
+
+   <!-- Summary Section -->
+   <div id="summary">
+       <h2>Summary of Univariate Analysis</h2>
+
+       <div class="summary-section">
+           <h3>Descriptive</h3>
+           <ul>
+               <li>The data has ordinal and continuous data.</li>
+               <li>Quality is in the range of min value = 3 and max value = 8.</li>
+               <li>Distributions are mostly right-skewed.</li>
+           </ul>
+       </div>
+
+       <div class="summary-section">
+           <h3>Univariate</h3>
+           <ul>
+               <li>All distributions are not Normal.</li>
+               <li>Outliers were present.</li>
+           </ul>
+       </div>
+   </div>
+</div>
+
+{% endblock %}
