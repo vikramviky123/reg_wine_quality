@@ -1,6 +1,7 @@
 import os
 import sys
 from pathlib import Path
+import yaml
 
 from src import logging, CustomException
 from src.wine_reg.a_constants import *
@@ -111,6 +112,11 @@ class ModelTrainer:
             self.train_models_path, 'best_params.joblib'))
         joblib_eval_results = Path(os.path.join(
             self.train_models_path, 'eval_results.joblib'))
+
+        with open('bestparams.yaml', 'w') as yaml_file:
+            yaml.dump(params_dict, yaml_file, default_flow_style=False)
+
+        logging.info(f"best parameters SAVED as bestparams.yaml")
 
         save_pickle(trained_models, joblib_file_path)
         logging.info(f"trained models are SAVED in {joblib_file_path}")
