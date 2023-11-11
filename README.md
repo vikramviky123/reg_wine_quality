@@ -6,6 +6,7 @@ The Project is mainly prepared and executed to learn
 1. How to write modular coding for end to end MLOPS
 2. How the MLOPS is executed using dvc.yaml
 3. How to use MLFLOW to track experiments and runs ( I have provided the link for this project exp)
+4. A web app is developed using html,css and flask for in detail analysis and prediction of wine quality
 
 # Big Thanks to.....
 A heartful thanks to KRISH NAIK for his sharing of knowledge and also thanks to BOKTIAR AHMED BAPPY for shaing the knowledge of MLOPS
@@ -76,6 +77,44 @@ export MLFLOW_TRACKING_PASSWORD=5a2f68ea5e0aec2c756d6c161922b40f4e682d32
 
 # Find my experiments here
 https://dagshub.com/vikramviky123/reg_wine_quality/experiments/#/
+
+# run python app.py 
+
+Running python app.py will launch web app in local host
+1. It has detailed overview of project.
+2. Plots of univariate, pairplots, correlation plots are also integrated
+3. model analysis is also presented
+4. model plots are also presented
+
+I am attaching snapshot of each page
+
+## Intro
+![Alt text](image.png)
+
+## Data Summary
+![Alt text](image-1.png)
+
+## EDA/univariate
+![Alt text](image-2.png)
+
+## EDA/Bi
+![Alt text](image-3.png)
+
+## Model/ Modal Analysis
+![Alt text](image-4.png)
+
+## Model / model eval
+![Alt text](image-5.png)
+
+## Prediction
+![Alt text](image-8.png)
+
+![Alt text](image-9.png)
+
+
+## validating predictions from 3_evaluation_res.ipynb
+![Alt text](image-6.png)
+
 
 # main.py output
 
