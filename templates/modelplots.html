@@ -9,14 +9,38 @@
     
     
     <div class="content">
-        <h2>1. Post Processing</h2>
-        <p>Post-processing involves regression plots and error plots of Random Forest Regressor </p>
+        <h2>1. Post Processing for model Random Forest Regressor</h2>
+
+        <p>Regression Plot</p>
         <div id="hist">
             <img src="{{ url_for('static', filename='model_plots/Reg_and_dist_plot for random_forest.jpg') }}" alt="MyOnlineMeal.com">
         </div>
+
+        <p>Error Plot</p>
         <div id="hist">
             <img src="{{ url_for('static', filename='model_plots/Error_plot for random_forest.jpg') }}" alt="MyOnlineMeal.com">
         </div>
+
+        <p>Feature Importance Plot</p>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/Feature_Importance.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+
+        <p>Permutaion Importance Plot</p>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/Permutation_Importance.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+
+        <h2>2. Most important features turns out to be</h2>
+        <ul>
+            <li>a. Alchohol</li>
+            <li>b. Sulphates</li>
+            <li>c. Volatile Acidity</li>
+            <li>d. Total Sulphuric Acid</li>
+        </ul>
+                
+
+
     </div>
 </div>
 
